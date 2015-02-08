@@ -6,4 +6,5 @@ png("D:\\CourseraCourses\\ExploratoryDataAnalysis\\plot3.png", width = 480, heig
 plot(data[,7]~as.POSIXct(data[,10]),type="l", xlab="",ylab="Energy sub Metering")
 lines(data[,8]~as.POSIXct(data[,10]),type="l",col="red")
 lines(data[,9]~as.POSIXct(data[,10]),type="l",col="blue")
+legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 dev.off()
