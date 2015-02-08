@@ -2,6 +2,6 @@ data<-read.table("D:\\CourseraCourses\\ExploratoryDataAnalysis\\household_power_
 data$Date<-as.Date(data$Date, "%d/%m/%y%y")
 data<-subset(data,Date>=as.Date("2007-02-01") & Date<=as.Date("2007-02-02"))
 data$timestamp<-strptime(paste(data[,1],data[,2]), "%Y-%m-%d %H:%M:%S")
-png("D:\\CourseraCourses\\ExploratoryDataAnalysis\\plot1.png", width = 480, height = 480)
+png("D:\\CourseraCourses\\ExploratoryDataAnalysis\\plot2.png", width = 480, height = 480)
 plot(data[,3]~as.POSIXct(data[,10]),type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
